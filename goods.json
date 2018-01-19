@@ -1,0 +1,30 @@
+{
+	"0001" : {
+		"name" : "Піца" , 
+		"cost" : 80, 
+		"description" : "Ковбаса, сир, кетчуп, помідори", 
+		"order" : 3, 
+		"img" : "pizza.png" 
+	},
+	"0002" : {
+		"name" : "Піца" , 
+		"cost" : 80, 
+		"description" : "Ковбаса, сир, кетчуп, помідори", 
+		"order" : 3, 
+		"img" : "pizza.png" 
+	},
+	"0003" : {
+		"name" : "Піца" , 
+		"cost" : 80, 
+		"description" : "Ковбаса, сир, кетчуп, помідори", 
+		"order" : 3, 
+		"img" : "pizza.png" 
+	},
+	"0004" : {
+		"name" : "Піца" , 
+		"cost" : 80, 
+		"description" : "Ковбаса, сир, кетчуп, помідори", 
+		"order" : 3, 
+		"img" : "pizza.png" 
+	}
+}
