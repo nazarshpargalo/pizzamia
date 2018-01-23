@@ -31,7 +31,7 @@ function addToCard() {
 		card[id]++;
 	}
 	//console.log(card);
-	showMiniCard();
+	showCard();
 	saveCard();
 }
 
@@ -50,8 +50,61 @@ function showMiniCard() {
 function loadCard() {
 	if (localStorage.getItem('cart')) {
 		card = JSON.parse(localStorage.getItem('cart'));
-		showMiniCard();
+		showCard();
 	}
+}
+function showCard() {
+	$.getJSON("goods.json", function (data) {
+		var goods = data;
+		var out = '';
+		for (var id in card) {
+			out += '<div class="col-xl-offset-1 col-lg-offset-1 col-xl-4 col-lg-4 col-md-4 col-sm-6">';
+			out += '<div class="horizontal checkcard">';
+			out += '<button data-id="'+id+'" class="del_goods">x</button>';
+			out += '<img src="img/'+goods[id].img+'">';
+			out += '<h3>'+goods[id].name+'</h3>';
+			out += card[id]*goods[id].cost+'грн';
+			out += '<p>Кількість:'+card[id]+'</p><br>';
+			out += '<button data-id="'+id+'" class="minus_goods">-</button>';
+			out += '<button data-id="'+id+'" class="plus_goods">+</button>';
+			out += '</div>';
+			out += '</div>';
+		}
+		$('.main_card').html(out);
+		$('.del_goods').on('click', delGoods);
+		$('.plus_goods').on('click', plusGoods);
+		$('.minus_goods').on('click', minusGoods);
+	});
+}
+
+function delGoods() {
+	var id = $(this).attr('data-id');
+	delete card[id];
+	showCard();
+	saveCard();
+}
+function plusGoods() {
+	var id = $(this).attr('data-id');
+	card[id]++;
+	showCard();
+	saveCard();
+}
+
+function minusGoods() {
+	var id = $(this).attr('data-id');
+	if (card[id]==1) {
+		delete card[id];
+	} else {
+		card[id]--;	
+	}
+	showCard();
+	saveCard();
+}
+
+function isEmpty(object) {
+	for (var key in object)
+	if (object.hasOwnProperty(key)) return true;
+	return false;
 }
 
 $(document).ready( function () {
