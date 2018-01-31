@@ -5,7 +5,6 @@ function init() {
 }
 
 function goodsOut(data) {
-	console.log(data);
 	var out = '';
 	for (var key in data) {
 		out += '<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">';
@@ -24,13 +23,11 @@ function goodsOut(data) {
 
 function addToCard() {
 	var id = $(this).attr('data-id');
-	//console.log(id);
 	if (card[id]==undefined) {
 		card[id] = 1;
 	} else {
 		card[id]++;
 	}
-	//console.log(card);
 	showCard();
 	saveCard();
 }
@@ -58,15 +55,14 @@ function showCard() {
 		var goods = data;
 		var out = '';
 		for (var id in card) {
-			out += '<div class="col-xl-offset-1 col-lg-offset-1 col-xl-4 col-lg-4 col-md-4 col-sm-6">';
+			out += '<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">';
 			out += '<div class="horizontal checkcard">';
-			out += '<button data-id="'+id+'" class="del_goods">x</button>';
-			out += '<img src="img/'+goods[id].img+'">';
-			out += '<h3>'+goods[id].name+'</h3>';
-			out += card[id]*goods[id].cost+'грн';
-			out += '<p>Кількість:'+card[id]+'</p><br>';
-			out += '<button data-id="'+id+'" class="minus_goods">-</button>';
-			out += '<button data-id="'+id+'" class="plus_goods">+</button>';
+			out += '<div col-xl-1 col-lg-1 col-md-1 col-sm-1>'+'<button data-id="'+id+'" class="del_goods">x</button></div>';
+			out += '<div col-xl-3 col-lg-3 col-md-3 col-sm-3>'+'<h3>'+goods[id].name+'</h3>'+'</div>';
+			out += '<div col-xl-3 col-lg-3 col-md-3 col-sm-3>'+'<p>'+card[id]*goods[id].cost+'грн'+'</p>'+'</div>';
+			out += '<div col-xl-3 col-lg-3 col-md-3 col-sm-3>'+'<p>Кількість:'+card[id]+'</p>'+'</div>';
+			out += '<div col-xl-1 col-lg-1 col-md-1 col-sm-1>'+'<button data-id="'+id+'" class="minus_goods">-</button>'+'</div>';
+			out += '<div col-xl-1 col-lg-1 col-md-1 col-sm-1>'+'<button data-id="'+id+'" class="plus_goods">+</button>'+'</div>';
 			out += '</div>';
 			out += '</div>';
 		}
@@ -111,3 +107,36 @@ $(document).ready( function () {
 	init();
 	loadCard();
 });
+
+(function($) {
+    $('a.page-scroll').bind('click', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: ($($anchor.attr('href')).offset().top - 50)
+        }, 1250, 'easeInOutExpo');
+        event.preventDefault();
+    });
+
+    $('body').scrollspy({
+        target: '.navbar-fixed-top',
+        offset: 51
+    });
+
+    $('.navbar-collapse ul li a').click(function(){ 
+            $('.navbar-toggle:visible').click();
+    });
+
+    $('#mainNav').affix({
+        offset: {
+            top: 60
+        }
+    })
+})(jQuery);
+
+  function slowScroll (id) {
+    var offset = 0;
+    $('html, body').animate ({
+      scrollTop: $(id).offset ().top - offset
+    }, 800);
+    return false;
+  }

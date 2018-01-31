@@ -1,24 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Playball|Philosoph');
+
 body
 {
     margin: 0;
     padding: 0;
 
-    font-family: 'RaphLanokFuture';
+    font-family: 'Playball', cursive;
     font-size: 16px;
     font-weight: 350;
 
-    margin-top: 75px;
     background-color: #f0ffff;
 
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
-}
+
+    background:
+        -webkit-linear-gradient(45deg, hsla(0, 100%, 27%, 1) 0%, hsla(0, 100%, 27%, 0) 70%),
+        -webkit-linear-gradient(315deg, hsla(37, 93%, 56%, 1) 10%, hsla(37, 93%, 56%, 0) 80%),
+        -webkit-linear-gradient(225deg, hsla(0, 97%, 50%, 1) 10%, hsla(0, 97%, 50%, 0) 80%),
+        -webkit-linear-gradient(135deg, hsla(20, 98%, 49%, 1) 100%, hsla(20, 98%, 49%, 0) 70%);
+    background:
+        linear-gradient(45deg, hsla(0, 100%, 27%, 1) 0%, hsla(0, 100%, 27%, 0) 70%),
+        linear-gradient(135deg, hsla(37, 93%, 56%, 1) 10%, hsla(37, 93%, 56%, 0) 80%),
+        linear-gradient(225deg, hsla(0, 97%, 50%, 1) 10%, hsla(0, 97%, 50%, 0) 80%),
+        linear-gradient(315deg, hsla(20, 98%, 49%, 1) 100%, hsla(20, 98%, 49%, 0) 70%);
+    }
 
 #footer
 {
     padding-top: 30px;
     padding-bottom: 20px;
-    background: #2d2d2d;
+    background: #351800;
+    border-top: 2px solid black;
 }
 
 #footer i
@@ -43,7 +56,7 @@ h4,
 h5,
 h6
 {
-    font-family: 'Akrobat';
+	font-family: 'Philosopher', sans-serif;;
     font-weight: 300;
     color: #333;
 }
@@ -59,7 +72,7 @@ p
     margin-bottom: 25px;
 }
 
-.cent
+.centered
 {
     text-align: center;
 }
@@ -82,44 +95,37 @@ a:focus
 }
 
 
-.navbar
-{
-    font-size: 16px;
+.navbar {
     font-weight: 800;
-
-    height: 70px;
+    font-size: 14px;
     padding-top: 15px;
     padding-bottom: 15px;
 }
 
-.navbar-inverse
-{
-    border-color: #2d2d2d;
-    background: #8f2e01;
+.navbar-inverse {
+    background: #351800;
+    border: none;
 }
 
-.navbar-inverse .navbar-nav > a
-{
-    width: 100px;
-    height: 40px;
-    display: block;
-    color: #d1520e;
-    line-height: 40px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: .5s;
-    box-sizing: border-box;
+.navbar-nav .navbar-collapse > a:hover {
+    border-bottom: 3px solid #af550c;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
 }
 
-.navbar-inverse .navbar-brand
-{
+.navbar-inverse .navbar-brand {
     font-size: 22px;
     font-weight: bolder;
     letter-spacing: 1px;
     color: #999;
 }
 
+.page-scroll {
+	-webkit-transition: all .7s;
+    -moz-transition: all .7s;
+    transition: all .7s;
+}
 
 /*! home */
 
@@ -128,10 +134,8 @@ a:focus
     display: flex;
     flex-direction: column;
 
-    width: 100%;
+    width: auto;
     height: 100vh;
-    margin-top: -15px;
-    padding: 20px;
 
     background: url(../img/header.jpg) no-repeat center top;
     background-attachment: relative;
@@ -145,28 +149,29 @@ a:focus
     align-items: center;
 }
 
-#buywrap
+#infowrap
 {
-    background: url(../img/buy.jpg) no-repeat center top;
-    background-attachment: relative;
-    background-position: center center;
-    -webkit-background-size: cover;
-       -moz-background-size: cover;
-         -o-background-size: cover;
-
-    -background-size: cover;
     justify-content: center;
     align-items: center;
     padding-bottom: 50px;
+    padding-top: 45px;
+}
+
+#buywrap
+{
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    padding-top: 35px;
 }
 
 #buywrap_2
 {
-    background: #070300;
     justify-content: center;
     align-items: center;
     padding-bottom: 50px;
     padding-top: 60px;
+
 }
 
 img
@@ -205,12 +210,13 @@ img
 
  /* shop */
 
+
 .btn {
-    background-color: #cc6a1a;
+	background-color: #cc6a1a;
     border: none;
 }
 .btn:hover,
-.btn:focus {
+.btn:active {
     background-color: #af550c;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
@@ -224,20 +230,31 @@ img
     padding-top: 70px;
 }
 .list {
-    justify-content: center;
+	justify-content: center;
 }
 .card {
-    display: inline-block;
-    width: 180px;
+	display: inline-block;
+	height: auto;
+	width: 250px;
     margin-top: 50px;
     padding: 15px 15px 15px 15px;
     border-radius: 7px;
-    background-color: #c6b299;
     text-align: center;
-    border: 3px solid black;
+    border: 1.5px solid white;
+
+    background:
+        -webkit-linear-gradient(45deg, hsla(9, 93%, 47%, 1) 0%, hsla(9, 93%, 47%, 0) 70%),
+        -webkit-linear-gradient(315deg, hsla(30, 93%, 45%, 1) 10%, hsla(30, 93%, 45%, 0) 80%),
+        -webkit-linear-gradient(225deg, hsla(13, 99%, 48%, 1) 10%, hsla(13, 99%, 48%, 0) 80%),
+        -webkit-linear-gradient(135deg, hsla(0, 97%, 46%, 1) 100%, hsla(0, 97%, 46%, 0) 70%);
+    background:
+        linear-gradient(45deg, hsla(9, 93%, 47%, 1) 0%, hsla(9, 93%, 47%, 0) 70%),
+        linear-gradient(135deg, hsla(30, 93%, 45%, 1) 10%, hsla(30, 93%, 45%, 0) 80%),
+        linear-gradient(225deg, hsla(13, 99%, 48%, 1) 10%, hsla(13, 99%, 48%, 0) 80%),
+        linear-gradient(315deg, hsla(0, 97%, 46%, 1) 100%, hsla(0, 97%, 46%, 0) 70%);
 }
 .card > img {
-    width: 150px;
+	width: 150px;
 }
 
 .buytitle {
@@ -248,9 +265,10 @@ img
 
  .btn-success {
     margin-top: 30px;
-    height: 50px;
-    width: 300px;
+    height: 60px;
+    width: auto;
     font-size: 26px;
+    border-radius: 12px;
  } 
 
  label {
@@ -265,10 +283,27 @@ img
 }
 
 .checkcard {
-    display: inline-block;
-    width: 400px;
-    padding: 15px 15px 15px 15px;
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    padding: 0px 15px 0px 15px;
     border-radius: 7px;
-    background-color: #c6b299;
     text-align: center;
+
+    background:
+        -webkit-linear-gradient(45deg, hsla(9, 93%, 47%, 1) 0%, hsla(9, 93%, 47%, 0) 70%),
+        -webkit-linear-gradient(315deg, hsla(30, 93%, 45%, 1) 10%, hsla(30, 93%, 45%, 0) 80%),
+        -webkit-linear-gradient(225deg, hsla(13, 99%, 48%, 1) 10%, hsla(13, 99%, 48%, 0) 80%),
+        -webkit-linear-gradient(135deg, hsla(0, 97%, 46%, 1) 100%, hsla(0, 97%, 46%, 0) 70%);
+    background:
+        linear-gradient(45deg, hsla(9, 93%, 47%, 1) 0%, hsla(9, 93%, 47%, 0) 70%),
+        linear-gradient(135deg, hsla(30, 93%, 45%, 1) 10%, hsla(30, 93%, 45%, 0) 80%),
+        linear-gradient(225deg, hsla(13, 99%, 48%, 1) 10%, hsla(13, 99%, 48%, 0) 80%),
+        linear-gradient(315deg, hsla(0, 97%, 46%, 1) 100%, hsla(0, 97%, 46%, 0) 70%);
+}
+
+.minus, .plus {
+	border-radius: 2px solid brown;
+	height: auto;
+	min-width: 20px;
 }
