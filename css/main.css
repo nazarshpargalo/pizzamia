@@ -107,6 +107,10 @@ a:focus
     border: none;
 }
 
+.navbar-toggle:active {
+    background-color: #54051a;
+}
+
 .navbar-nav .navbar-collapse > a:hover {
     border-bottom: 3px solid #af550c;
     -webkit-transition: all .5s;
@@ -265,6 +269,7 @@ img
 
  .btn-success {
     margin-top: 30px;
+    padding: 0px 20px 0px 20px;
     height: 60px;
     width: auto;
     font-size: 26px;
@@ -288,7 +293,7 @@ img
     margin-top: 10px;
     padding: 0px 15px 0px 15px;
     border-radius: 7px;
-    text-align: center;
+    align-items: center;
 
     background:
         -webkit-linear-gradient(45deg, hsla(9, 93%, 47%, 1) 0%, hsla(9, 93%, 47%, 0) 70%),
@@ -302,8 +307,14 @@ img
         linear-gradient(315deg, hsla(0, 97%, 46%, 1) 100%, hsla(0, 97%, 46%, 0) 70%);
 }
 
-.minus, .plus {
+.minus_goods, .plus_goods {
 	border-radius: 2px solid brown;
 	height: auto;
 	min-width: 20px;
+    align-items: right;
+}
+@media (max-width: 720px) {
+    .menu_text {
+        font-size: 1.8em;
+    }
 }

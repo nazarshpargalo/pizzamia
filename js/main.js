@@ -56,13 +56,13 @@ function showCard() {
 		var out = '';
 		for (var id in card) {
 			out += '<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">';
-			out += '<div class="horizontal checkcard">';
-			out += '<div col-xl-1 col-lg-1 col-md-1 col-sm-1>'+'<button data-id="'+id+'" class="del_goods">x</button></div>';
-			out += '<div col-xl-3 col-lg-3 col-md-3 col-sm-3>'+'<h3>'+goods[id].name+'</h3>'+'</div>';
-			out += '<div col-xl-3 col-lg-3 col-md-3 col-sm-3>'+'<p>'+card[id]*goods[id].cost+'грн'+'</p>'+'</div>';
-			out += '<div col-xl-3 col-lg-3 col-md-3 col-sm-3>'+'<p>Кількість:'+card[id]+'</p>'+'</div>';
-			out += '<div col-xl-1 col-lg-1 col-md-1 col-sm-1>'+'<button data-id="'+id+'" class="minus_goods">-</button>'+'</div>';
-			out += '<div col-xl-1 col-lg-1 col-md-1 col-sm-1>'+'<button data-id="'+id+'" class="plus_goods">+</button>'+'</div>';
+			out += '<div class="horizontal checkcard row">';
+			out += '<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1"><button data-id="'+id+'" class="del_goods btn-danger"><i class="fas fa-trash-alt"></i></button></div>';
+			out += '<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3"><h3>'+goods[id].name+'</h3></div>';
+			out += '<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3"><p>'+card[id]*goods[id].cost+'грн'+'</p></div>';
+			out += '<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3"><p>Кількість:'+card[id]+'</p></div>';
+			out += '<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1"><button data-id="'+id+'" class="minus_goods btn-danger"><i class="fas fa-minus-square"></i></button></div>';
+			out += '<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1"><button data-id="'+id+'" class="plus_goods btn-default"><i class="fas fa-plus-square"></i></button></div>';
 			out += '</div>';
 			out += '</div>';
 		}
