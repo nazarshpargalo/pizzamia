@@ -10,10 +10,12 @@ function goodsOut(data) {
 		out += '<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">';
 		out += '<div class="card">';
 		out += '<img src="img/'+data[key].img+'">';
+		out += '<div class="textblock">';
 		out += '<h3>'+data[key].name+'</h3>';
 		out += '<h4>Ціна: '+data[key].cost+'грн</h4>';
 		out += '<p>'+data[key].description+'</p>';
 		out += '<button class="btn btn-primary btn-lg add-to-card" data-id="'+key+'">Купити</button>';
+		out += '</div>';
 		out += '</div>';
 		out += '</div>';
 	}

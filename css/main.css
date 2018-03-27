@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Playball|Philosoph');
+@import url('https://fonts.googleapis.com/css?family=|Open+Sans|Philosoph');
 
 body
 {
     margin: 0;
     padding: 0;
 
-    font-family: 'Playball', cursive;
+    font-family: 'Open+Sans' , cursive;
     font-size: 16px;
     font-weight: 350;
 
@@ -56,7 +56,7 @@ h4,
 h5,
 h6
 {
-	font-family: 'Philosopher', sans-serif;;
+	font-family: 'Open+Sans', sans-serif;;
     font-weight: 300;
     color: #333;
 }
@@ -126,15 +126,14 @@ a:focus
 }
 
 .page-scroll {
-	-webkit-transition: all .7s;
-    -moz-transition: all .7s;
-    transition: all .7s;
+	-webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s;
 }
 
 /*! home */
 
-#headerwrap
-{
+#headerwrap {
     display: flex;
     flex-direction: column;
 
@@ -153,8 +152,7 @@ a:focus
     align-items: center;
 }
 
-#infowrap
-{
+#infowrap {
     justify-content: center;
     align-items: center;
     padding-bottom: 50px;
@@ -169,8 +167,7 @@ a:focus
     padding-top: 35px;
 }
 
-#buywrap_2
-{
+#buywrap_2 {
     justify-content: center;
     align-items: center;
     padding-bottom: 50px;
@@ -178,37 +175,35 @@ a:focus
 
 }
 
-img
-{
+img {
     width: auto;
     max-width: 100%;
     height: auto;
 }
 
 
-.sparkly
-{
+.sparkly {
     text-shadow: 0 0 8px rgba(255,255,255,.7);
 }
 
-.logo
-{
+.logo {
     width: auto;
-    max-width: 70%;
     height: auto;
-    max-height: 70%;
+    max-width: 60%;
+    max-height: 60%;
+    min-width: 16em;
+    min-height: 16em;
+    padding-top: 4em;
 }
 
-.logo_1
-{
+.logo_1 {
     font-size: 124px;
     font-weight: bolder;
     letter-spacing: 1px;
     color: #fff;
 }
 
-.red
-{
+.red {
     color: red;
 }
 
@@ -229,8 +224,7 @@ img
     border: none;
 }
 
-.shop
-{
+.shop {
     padding-top: 70px;
 }
 .list {
@@ -241,21 +235,24 @@ img
 	height: auto;
 	width: 250px;
     margin-top: 50px;
-    padding: 15px 15px 15px 15px;
+    padding: 15px 15px 20px 20px;
     border-radius: 7px;
     text-align: center;
-    border: 1.5px solid white;
+    border: 1.5px solid gray;
 
-    background:
-        -webkit-linear-gradient(45deg, hsla(9, 93%, 47%, 1) 0%, hsla(9, 93%, 47%, 0) 70%),
-        -webkit-linear-gradient(315deg, hsla(30, 93%, 45%, 1) 10%, hsla(30, 93%, 45%, 0) 80%),
-        -webkit-linear-gradient(225deg, hsla(13, 99%, 48%, 1) 10%, hsla(13, 99%, 48%, 0) 80%),
-        -webkit-linear-gradient(135deg, hsla(0, 97%, 46%, 1) 100%, hsla(0, 97%, 46%, 0) 70%);
-    background:
-        linear-gradient(45deg, hsla(9, 93%, 47%, 1) 0%, hsla(9, 93%, 47%, 0) 70%),
-        linear-gradient(135deg, hsla(30, 93%, 45%, 1) 10%, hsla(30, 93%, 45%, 0) 80%),
-        linear-gradient(225deg, hsla(13, 99%, 48%, 1) 10%, hsla(13, 99%, 48%, 0) 80%),
-        linear-gradient(315deg, hsla(0, 97%, 46%, 1) 100%, hsla(0, 97%, 46%, 0) 70%);
+    background: url(../img/473126707.jpg) no-repeat center top;
+    background-attachment: relative;
+    background-position: center center;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+
+    -background-size: cover;
+    justify-content: center;
+
+-webkit-box-shadow: 0px 0px 87px 6px rgba(3,3,3,0.79);
+-moz-box-shadow: 0px 0px 87px 6px rgba(3,3,3,0.79);
+box-shadow: 0px 0px 87px 6px rgba(3,3,3,0.79);
 }
 .card > img {
 	width: 150px;
@@ -263,17 +260,30 @@ img
 
 .buytitle {
     color: #dbdbdb;
+    font-size: cover;
+}
+
+.textblock {
+	border-radius: 7px;
+	background-color: #997249;
+	padding-top: 1px;
+    padding-bottom: 10px;
+    margin-top: 10px;
 }
 
  /* Замовлення */
 
  .btn-success {
     margin-top: 30px;
-    padding: 0px 20px 0px 20px;
+    padding-bottom: 20px;
     height: 60px;
     width: auto;
     font-size: 26px;
     border-radius: 12px;
+ } 
+
+  .btn-success:active {
+    color: #c79b5a;
  } 
 
  label {
@@ -285,6 +295,7 @@ img
 .form-control {
     margin-top: 25px;
     font-size: 18px;
+    font-family: 'Open+Sans';
 }
 
 .checkcard {
@@ -315,6 +326,6 @@ img
 }
 @media (max-width: 720px) {
     .menu_text {
-        font-size: 1.8em;
+        font-size: 1.9em;
     }
 }
